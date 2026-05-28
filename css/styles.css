@@ -154,7 +154,7 @@ ul { padding-left: 1.25rem; }
   padding: var(--space-2) var(--space-3);
 }
 .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
-.logo img { height: 34px; width: auto; display: block; flex-shrink: 0; }
+.logo img { height: 44px; width: auto; display: block; flex-shrink: 0; }
 .nav nav { display: flex; gap: var(--space-3); align-items: center; }
 .nav nav a {
   padding: 0.5rem 0.25rem;
