@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina Strategy Solutions</title>
+  <meta name="description" content="Lumina Strategy Solutions - structural layout clone." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232563eb'/%3E%3Ctext x='16' y='22' font-family='system-ui,sans-serif' font-size='20' font-weight='700' fill='white' text-anchor='middle'%3EL%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css?v=37" />
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ============================================================
+       PINNED ANNOUNCEMENT BAR - appears after scrolling past hero
+       ============================================================ -->
+  <aside class="announcement-bar" id="announcementBar" aria-label="Hiring announcement" hidden>
+    <div class="container announcement-bar-inner">
+      <span class="announcement-bar-text">
+        <strong>We're hiring</strong> - check out our open roles in Gulberg-II, Lahore.
+      </span>
+      <a href="#careers" class="announcement-bar-cta">See open roles →</a>
+      <button type="button" class="announcement-bar-close" aria-label="Dismiss announcement" data-dismiss>
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================
+       HEADER - logo left, nav links right
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="logo" aria-label="Lumina Strategy Solutions - home">
+        <img src="assets/images/logo-dark.svg" alt="Lumina Strategy Solutions" />
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <line class="nav-toggle-line nav-toggle-line-top" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="nav-toggle-line nav-toggle-line-mid" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="nav-toggle-line nav-toggle-line-bot" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <nav id="primary-nav" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#careers">Careers</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO - centered headline + subhead + primary CTA + announcement
+         ============================================================ -->
+    <section class="hero">
+      <img class="hero-star hero-star-1" src="assets/images/star.svg" alt="" aria-hidden="true" />
+      <img class="hero-star hero-star-2" src="assets/images/star.svg" alt="" aria-hidden="true" />
+      <div class="container">
+
+        <div class="audience-toggle" role="tablist" aria-label="Choose audience">
+          <button type="button" class="active" data-mode="biz" role="tab" aria-selected="true" aria-controls="hero-biz">For Businesses</button>
+          <button type="button" data-mode="career" role="tab" aria-selected="false" aria-controls="hero-career">Careers</button>
+        </div>
+
+        <div class="hero-split">
+          <div class="hero-text">
+
+            <!-- Business pane -->
+            <div class="hero-pane active" id="hero-biz" data-pane="biz" role="tabpanel" aria-labelledby="hero-biz-heading">
+              <h1 id="hero-biz-heading">Most of your leads never get a call back. <span class="hero-underline">We&rsquo;re the floor that does.</span></h1>
+              <p class="lede">Lumina is the outsourced sales, support, and lead-generation team for companies that can&rsquo;t afford a slow pipeline. Trained agents on your product, in your customers&rsquo; language, picking up around the clock.</p>
+              <div class="hero-actions">
+                <a href="#contact" class="btn btn-primary btn-lg">Book a discovery call</a>
+              </div>
+            </div>
+
+            <!-- Careers pane -->
+            <div class="hero-pane" id="hero-career" data-pane="career" role="tabpanel" aria-labelledby="hero-career-heading" hidden>
+              <h1 id="hero-career-heading"><span class="hero-underline">Your voice</span> is worth a lot more than the floor next&nbsp;door.</h1>
+              <p class="lede"><strong>Join a 500-strong team</strong> where the training is paid from day one, the bonuses land every month, and the night shift comes with a hot meal and a ride home.</p>
+              <div class="hero-actions">
+                <a href="#careers" class="btn btn-primary btn-lg">See open roles</a>
+              </div>
+              <div class="hero-flag">
+                <span class="hero-flag-pulse" aria-hidden="true"></span>
+                <span>New seats open this month - apply before training starts</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="hero-media" aria-hidden="true">
+            <img class="video-star video-star-1" src="assets/images/star.svg" alt="" />
+            <img class="video-star video-star-2" src="assets/images/star.svg" alt="" />
+            <div class="hero-video-circle">
+              <video class="hero-person-video" autoplay muted playsinline preload="metadata">
+                <source src="assets/video/hero-person.mp4?v=3" type="video/mp4">
+              </video>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STATS BAR - 4 credibility numbers in one line
+         ============================================================ -->
+    <section class="stats" aria-label="Lumina by the numbers">
+      <div class="container">
+        <div class="stats-bento">
+
+          <article class="stat-card stat-card-hero">
+            <span class="stat-value" data-target="500" data-suffix="+">500+</span>
+            <span class="stat-label">Agents on the floor</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-value" data-target="7" data-suffix=" yrs">7 yrs</span>
+            <span class="stat-label">In operation</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-value" data-target="12" data-suffix="+">12+</span>
+            <span class="stat-label">Languages covered</span>
+          </article>
+
+          <article class="stat-card">
+            <span class="stat-value" data-target="24" data-suffix="/7">24/7</span>
+            <span class="stat-label">Coverage, every timezone</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES OVERVIEW - 3-column card grid
+         ============================================================ -->
+    <section id="services" class="services-overview" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="section-heading">Four ways we put revenue back in motion</h2>
+        <p class="section-lead">You don't need another vendor. You need a team that behaves like it's on your cap table - and reports like it too.</p>
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><path d="M2 13h20"/></svg>
+            </div>
+            <h3>Outbound Sales &amp; Lead Generation</h3>
+            <p>We call, qualify, and book - so your closers only ever talk to people who are ready to buy. No more cold lists rotting in a spreadsheet.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Customer Support &amp; Retention</h3>
+            <p>Every unanswered ticket is a customer halfway out the door. We answer - every hour, in every language your buyers actually speak.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
+            </div>
+            <h3>Marketing &amp; Publisher Growth</h3>
+            <p>Campaigns, lead routing, and publisher relationships handled end to end. We turn ad spend into qualified conversations, not vanity clicks.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>Strategic Consulting</h3>
+            <p>Before we dial, we map. We pressure-test your funnel, scripts, and targeting so the volume we add converts instead of just inflating call logs.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY LUMINA (Business) - 2-col checkmark grid
+         ============================================================ -->
+    <section id="why-lumina" class="why-lumina" aria-labelledby="why-lumina-heading">
+      <div class="container">
+        <p class="section-kicker section-kicker-left">Why Lumina</p>
+        <h2 id="why-lumina-heading" class="section-heading section-heading-left">Outsourcing without the part everyone hates</h2>
+        <div class="why-lumina-grid">
+
+          <article class="why-lumina-card why-lumina-card-featured">
+<div class="why-lumina-card-body">
+              <h3>You get a team, not a trial run</h3>
+              <p>Agents train on your product for four weeks before they ever touch a live account.</p>
+            </div>
+          </article>
+
+          <article class="why-lumina-card">
+            <div class="why-lumina-card-body">
+              <h3>Staffed for your timezone, not ours</h3>
+              <p>A lead in Sydney and a ticket in Toronto get the same response speed - that&rsquo;s what 24/7 actually means.</p>
+            </div>
+          </article>
+
+          <article class="why-lumina-card">
+            <div class="why-lumina-card-body">
+              <h3>12+ languages, spoken properly</h3>
+              <p>Your customers hear someone who sounds like them, not a script being read phonetically.</p>
+            </div>
+          </article>
+
+          <article class="why-lumina-card">
+            <div class="why-lumina-card-body">
+              <h3>Numbers you can actually see</h3>
+              <p>Live reporting on calls, conversions, and pipeline. No monthly black box, no &ldquo;trust us.&rdquo;</p>
+            </div>
+          </article>
+
+        </div>
+        <img class="why-lumina-star" src="assets/images/star.svg" alt="" aria-hidden="true" />
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS (Business) - 3 step cards
+         ============================================================ -->
+    <section id="how-it-works" class="how-it-works" aria-labelledby="how-it-works-heading">
+      <div class="container">
+        <p class="section-kicker">How it works</p>
+        <h2 id="how-it-works-heading" class="section-heading">From first call to scaled team in three moves</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Discovery &amp; fit</h3>
+            <p>We learn your offer, your buyer, and your numbers. If we don&rsquo;t think we can move them, we&rsquo;ll tell you on the first call.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Build &amp; train</h3>
+            <p>We script, staff, and train a dedicated team on your product - paid, and fully ramped before a single live conversation.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Launch &amp; scale</h3>
+            <p>We go live, report daily, and add seats only as the results prove the case. You scale on evidence, not promises.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY WORK HERE - perks + comp on left, office photo on right
+         ============================================================ -->
+    <section id="why-us" class="why-us" aria-labelledby="why-us-heading">
+      <div class="container why-us-grid">
+        <div class="why-us-content">
+          <h2 id="why-us-heading" class="section-heading section-heading-left">Get paid to talk.<br/>Get good. Get promoted.</h2>
+          <p class="why-us-lede">No unpaid &ldquo;probation.&rdquo; No vague &ldquo;competitive salary.&rdquo; Here&rsquo;s exactly what you walk into.</p>
+
+          <p class="salary-pill"><strong>PKR 45,000 - 60,000 / month</strong> + monthly performance bonus &amp; commission</p>
+
+          <ul class="perks-list">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Paid 4-week training</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Health insurance for you &amp; family</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Pick-and-drop transport</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Performance bonuses every month</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Free meals on night shift</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span>Modern AC office in Gulberg-II</span>
+            </li>
+          </ul>
+
+        </div>
+
+        <figure class="team-photo">
+          <img src="assets/images/office.png" alt="The Lumina team in our Gulberg-II, Lahore office" loading="lazy" />
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW TO APPLY - 3-step process strip
+         ============================================================ -->
+    <section class="how-to-apply" aria-labelledby="how-to-apply-heading">
+      <div class="container">
+        <h2 id="how-to-apply-heading" class="section-heading">Three steps. No black holes</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">01</span>
+            <h3>Apply online</h3>
+            <p>Send your CV through the form below. Two minutes, one upload - that&rsquo;s it.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">02</span>
+            <h3>Interview</h3>
+            <p>A real conversation, on-site or by phone. We care how you talk to people, not how you format a resume.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">03</span>
+            <h3>Start paid training</h3>
+            <p>Day one you&rsquo;re on the payroll and learning the floor alongside the team.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CAREERS - collapsed job cards (details/summary)
+         ============================================================ -->
+    <section id="careers" class="careers" aria-labelledby="careers-heading">
+      <div class="container">
+        <h2 id="careers-heading" class="section-heading">Seats open right now</h2>
+
+        <details class="job">
+          <summary>
+            <div class="job-summary">
+              <div class="job-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div class="job-summary-text">
+                <h3>English-Speaking Sales Agent</h3>
+                <p class="job-teaser">On-site · Gulberg-II, Lahore · Full-time</p>
+              </div>
+              <span class="job-toggle" aria-hidden="true">View details</span>
+            </div>
+          </summary>
+          <div class="job-body">
+            <div class="job-body-content">
+                <p class="role-description">If you can hold a conversation and you&rsquo;re not scared of a target, this pays better than you think. You&rsquo;ll talk to warm prospects, not random strangers, and you&rsquo;ll have a script that actually works behind you.</p>
+
+                <div class="job-grid">
+                  <div>
+                    <h4>You&rsquo;ll be doing</h4>
+                    <ul>
+                      <li>Calling and qualifying warm leads</li>
+                      <li>Booking and following up on appointments</li>
+                      <li>Logging every call cleanly in the CRM</li>
+                      <li>Hitting daily and monthly targets</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>You&rsquo;ll need</h4>
+                    <ul>
+                      <li>Fluent, confident English</li>
+                      <li>A clear phone voice and thick skin</li>
+                      <li>Comfort with targets and KPIs</li>
+                      <li>Based in / able to commute to Lahore</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>You&rsquo;ll get</h4>
+                    <ul>
+                      <li>PKR 45,000-60,000 + commission</li>
+                      <li>Paid 4-week training</li>
+                      <li>Health insurance + transport</li>
+                      <li>A clear path to team lead</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a href="mailto:hr@luminastrat.solutions" class="btn btn-primary">Send your CV</a>
+              </div>
+          </div>
+        </details>
+
+        <details class="job">
+          <summary>
+            <div class="job-summary">
+              <div class="job-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <div class="job-summary-text">
+                <h3>Customer Support Agent</h3>
+                <p class="job-teaser">On-site · Gulberg-II, Lahore · Rotational shifts</p>
+              </div>
+              <span class="job-toggle" aria-hidden="true">View details</span>
+            </div>
+          </summary>
+          <div class="job-body">
+            <div class="job-body-content">
+                <p class="role-description">You&rsquo;re the reason a customer stays instead of leaving. Calm, clear, and quick - that&rsquo;s the job. We&rsquo;ll give you the training and tools; you bring the patience.</p>
+
+                <div class="job-grid">
+                  <div>
+                    <h4>You&rsquo;ll be doing</h4>
+                    <ul>
+                      <li>Answering calls, chats, and tickets</li>
+                      <li>Resolving issues end to end</li>
+                      <li>Keeping customers informed and calm</li>
+                      <li>Flagging recurring problems to the team</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>You&rsquo;ll need</h4>
+                    <ul>
+                      <li>Strong spoken &amp; written English</li>
+                      <li>Patience and problem-solving instinct</li>
+                      <li>Willingness to work rotational shifts</li>
+                      <li>Based in / able to commute to Lahore</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>You&rsquo;ll get</h4>
+                    <ul>
+                      <li>PKR 45,000-60,000 + bonuses</li>
+                      <li>Paid training &amp; night-shift meals</li>
+                      <li>Health insurance + transport</li>
+                      <li>Growth into QA or team lead</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <a href="mailto:hr@luminastrat.solutions" class="btn btn-primary">Send your CV</a>
+              </div>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS - 3 cards with quote + photo + name + role
+         ============================================================ -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="testimonials-layout">
+
+          <div class="testimonials-intro">
+            <img class="testimonials-star" src="assets/images/star.svg" alt="" aria-hidden="true" />
+            <svg class="testimonials-intro-quote" viewBox="0 0 32 32" width="56" height="56" aria-hidden="true" fill="currentColor"><path d="M9.5 8C5.4 8 2 11.4 2 15.5V24h8v-8.5H6c0-2 1.5-3.5 3.5-3.5V8zm14 0C19.4 8 16 11.4 16 15.5V24h8v-8.5h-4c0-2 1.5-3.5 3.5-3.5V8z"/></svg>
+            <h2 id="testimonials-heading" class="testimonials-intro-heading">Straight from<br/>the floor</h2>
+            <p class="testimonials-intro-text">More than 500 agents have built their careers at Lumina Strategy Solutions.</p>
+          </div>
+
+          <div class="testimonial-card" aria-roledescription="carousel" aria-labelledby="testimonials-heading">
+            <div class="testimonial-card-top">
+              <span class="testimonial-card-label">What they say</span>
+              <div class="testimonial-dots" role="tablist" aria-label="Testimonial navigation">
+                <button type="button" class="testimonial-dot active" data-dot="0" aria-label="Testimonial 1" aria-selected="true"></button>
+                <button type="button" class="testimonial-dot" data-dot="1" aria-label="Testimonial 2" aria-selected="false"></button>
+                <button type="button" class="testimonial-dot" data-dot="2" aria-label="Testimonial 3" aria-selected="false"></button>
+              </div>
+            </div>
+
+            <div class="testimonial-slides">
+
+              <article class="testimonial-slide active" aria-hidden="false">
+                <p class="testimonial-quote-text">&ldquo;I joined for the salary and stayed for the bonuses. Three months in I was already training new hires.&rdquo;</p>
+                <div class="testimonial-slide-footer">
+                  <div class="testimonial-author">
+                    <div class="testimonial-author-photo tl" role="img" aria-label="Omar Siddiqui portrait"></div>
+                    <div class="testimonial-author-text">
+                      <span class="testimonial-author-name">Omar Siddiqui</span>
+                      <span class="testimonial-author-role">Sales Agent · 1 year at Lumina</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="testimonial-slide" aria-hidden="true">
+                <p class="testimonial-quote-text">&ldquo;The paid training is real. I learned more in four weeks here than a year at my last job.&rdquo;</p>
+                <div class="testimonial-slide-footer">
+                  <div class="testimonial-author">
+                    <div class="testimonial-author-photo br" role="img" aria-label="Ayesha Khan portrait"></div>
+                    <div class="testimonial-author-text">
+                      <span class="testimonial-author-name">Ayesha Khan</span>
+                      <span class="testimonial-author-role">Support Agent · 8 months at Lumina</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <article class="testimonial-slide" aria-hidden="true">
+                <p class="testimonial-quote-text">&ldquo;Night shift with a meal and a ride home sounds small until you&rsquo;ve worked somewhere without it.&rdquo;</p>
+                <div class="testimonial-slide-footer">
+                  <div class="testimonial-author">
+                    <div class="testimonial-author-photo bl" role="img" aria-label="Bilal Ahmed portrait"></div>
+                    <div class="testimonial-author-text">
+                      <span class="testimonial-author-name">Bilal Ahmed</span>
+                      <span class="testimonial-author-role">Team Lead · 2 years at Lumina</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <div class="testimonial-nav-buttons">
+              <button type="button" class="testimonial-nav-btn" data-prev aria-label="Previous testimonial">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <button type="button" class="testimonial-nav-btn" data-next aria-label="Next testimonial">
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT - split: info left, form right
+         ============================================================ -->
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <h2 id="contact-heading" class="section-heading section-heading-left">Tell us what you need.<span class="section-heading-sub">We&rsquo;ll tell you if we&rsquo;re the fit.</span></h2>
+          <p class="contact-intro">Business enquiries go to our partnerships team. Job applications go straight to HR - both inboxes are watched daily.</p>
+
+          <ul class="socials" aria-label="Social media">
+            <li>
+              <a href="#" aria-label="Lumina on LinkedIn">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10H5.67v8.34h2.67zM7 8.84a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zM18.34 18.34v-4.57c0-2.46-1.31-3.6-3.07-3.6-1.42 0-2.06.78-2.41 1.33V10h-2.67c.04.76 0 8.34 0 8.34h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.98 1.36-.98.96 0 1.35.73 1.35 1.8v4.5h2.68z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Lumina on X (Twitter)">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="Lumina on Facebook">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.5-3.9 3.79-3.9 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="contact-list">
+            <li><strong>Phone:</strong> <a href="tel:+923200044290">+92 320 0044290</a></li>
+            <li><strong>Business enquiries:</strong> <a href="mailto:enquiries@luminastrat.solutions">enquiries@luminastrat.solutions</a></li>
+            <li><strong>Careers / HR:</strong> <a href="mailto:hr@luminastrat.solutions">hr@luminastrat.solutions</a></li>
+            <li><strong>Address:</strong> Techverx, 3-P 2nd floor, Sir Syed Road, Block-P, Gulberg-II, Punjab, Pakistan</li>
+          </ul>
+        </div>
+
+        <form class="contact-form" novalidate aria-labelledby="form-heading">
+          <h2 id="form-heading" class="visually-hidden">Contact form</h2>
+
+          <label>
+            <span>Name <span class="required" aria-hidden="true">*</span></span>
+            <input type="text" name="name" required aria-required="true" autocomplete="name" placeholder="Your name" />
+          </label>
+
+          <label>
+            <span>Email <span class="required" aria-hidden="true">*</span></span>
+            <input type="email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com" />
+          </label>
+
+          <label>
+            <span>Message <span class="required" aria-hidden="true">*</span></span>
+            <textarea name="message" rows="5" required aria-required="true" placeholder="Your message"></textarea>
+          </label>
+
+          <label class="checkbox">
+            <input type="checkbox" name="terms" required aria-required="true" />
+            <span>I accept the <a href="#">terms and conditions</a>.</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER - centered: copyright + 3 policy links
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Lumina Strategy Solutions (SMC-Private) Limited. Registration no. J101078.</p>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Cookie Policy</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       CV APPLICATION MODAL - opens when a "Send your CV" button is clicked
+       ============================================================ -->
+  <dialog class="cv-modal" id="cvModal" aria-labelledby="cvModalTitle">
+    <button type="button" class="cv-modal-close" aria-label="Close" data-close>
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div class="cv-modal-header">
+      <div class="cv-modal-illustration" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="56" height="56" fill="none">
+          <circle cx="32" cy="32" r="32" fill="#eef2ff"/>
+          <path d="M44 22L26 30l8 8 10-16z" fill="#2563eb"/>
+          <path d="M44 22L34 38l-4-4-2 8 14-20z" fill="#1d4ed8"/>
+          <circle cx="20" cy="20" r="1.5" fill="#2563eb"/>
+          <circle cx="48" cy="44" r="1.5" fill="#2563eb"/>
+          <circle cx="18" cy="44" r="1" fill="#2563eb"/>
+        </svg>
+      </div>
+      <h2 id="cvModalTitle" class="cv-modal-title">Join Our Team!</h2>
+      <p class="cv-modal-subtitle">Fill out the form below and our team will be in touch.</p>
+    </div>
+
+    <form class="cv-form" novalidate>
+
+      <div class="cv-form-section">
+        <label>
+          <span>Full Name <span class="required" aria-hidden="true">*</span></span>
+          <input type="text" name="fullName" required aria-required="true" autocomplete="name" />
+        </label>
+
+        <label>
+          <span>Email <span class="required" aria-hidden="true">*</span></span>
+          <input type="email" name="email" required aria-required="true" autocomplete="email" />
+        </label>
+
+        <label>
+          <span>Phone <span class="required" aria-hidden="true">*</span></span>
+          <input type="tel" name="phone" required aria-required="true" autocomplete="tel" />
+        </label>
+      </div>
+
+      <div class="cv-form-section">
+        <label>
+          <span>Municipality</span>
+          <input type="text" name="municipality" autocomplete="address-level2" />
+        </label>
+
+        <label>
+          <span>Area of interest</span>
+          <input type="text" name="interest" />
+        </label>
+
+        <div class="cv-field-cv">
+          <span class="cv-field-cv-label">CV <span class="required" aria-hidden="true">*</span></span>
+          <div class="file-input">
+            <input type="file" name="cv" id="cvFileInput" required aria-required="true" accept=".pdf,.doc,.docx" />
+            <label for="cvFileInput" class="file-input-label">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <span>Choose file</span>
+            </label>
+            <span class="file-input-status">No file chosen</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-form-bottom">
+        <input
+          type="text"
+          name="captcha"
+          class="cv-captcha"
+          required
+          aria-required="true"
+          inputmode="numeric"
+          autocomplete="off"
+          aria-label="Captcha - enter the answer to the math question shown as placeholder"
+        />
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <script src="js/main.js?v=9" defer></script>
+</body>
+</html>

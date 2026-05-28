@@ -1,0 +1,16 @@
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+
+# Backups produced during local iteration
+*.bak
+assets/video/*.bak
+
+# Logs
+*.log
+npm-debug.log*
